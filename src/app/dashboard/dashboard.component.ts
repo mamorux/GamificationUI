@@ -7,18 +7,14 @@ import { Component, OnInit } from '@angular/core';
           <div class="events">
               <mat-toolbar color="primary">
                   <mat-toolbar-row >
-                      Units
-                      <span class="example-spacer"></span>
-<!--                      <button mat-icon-button (click)="clearUnits()">-->
-                          <mat-icon>delete</mat-icon>
-<!--                      </button>-->
+                      Missions
                   </mat-toolbar-row>
               </mat-toolbar>
-              <app-unit-item
+              <app-mission-item
                       *ngFor="let mission of missions"
                       [mission] = "mission"
               >
-              </app-unit-item>
+              </app-mission-item>
           </div>
       </div>
   `,
