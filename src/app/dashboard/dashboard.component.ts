@@ -2,11 +2,30 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
+  template: `
+      <div fxLayout="column">
+          <div class="events">
+              <mat-toolbar color="primary">
+                  <mat-toolbar-row >
+                      Units
+                      <span class="example-spacer"></span>
+<!--                      <button mat-icon-button (click)="clearUnits()">-->
+                          <mat-icon>delete</mat-icon>
+<!--                      </button>-->
+                  </mat-toolbar-row>
+              </mat-toolbar>
+              <app-unit-item
+                      *ngFor="let mission of missions"
+                      [mission] = "mission"
+              >
+              </app-unit-item>
+          </div>
+      </div>
+  `,
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  missions: string[] = [];
   constructor() { }
 
   ngOnInit() {
