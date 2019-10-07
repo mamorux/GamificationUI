@@ -7,20 +7,16 @@ import { Component, OnInit } from '@angular/core';
           <div class="events">
               <mat-toolbar color="primary">
                   <mat-toolbar-row >
-                      Incidents
-                      <span class="example-spacer"></span>
-<!--                      <button mat-icon-button (click)="clearIncidents()">-->
-                          <mat-icon>delete</mat-icon>
-<!--                      </button>-->
+                      Heroes
                   </mat-toolbar-row>
               </mat-toolbar>
 
 
-              <app-incident-item
+              <app-hero-item
                       *ngFor="let hero of heroes"
                       [hero] = "hero"
               >
-              </app-incident-item>
+              </app-hero-item>
           </div>
       </div>
   `,
